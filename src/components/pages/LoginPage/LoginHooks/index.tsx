@@ -2,19 +2,28 @@ import React from 'react';
 import { GoogleLoginResponse, GoogleLoginResponseOffline, useGoogleLogin } from 'react-google-login';
 import { Button } from '@material-ui/core';
 import { ReactComponent as Google } from 'assets/google.svg';
+import { useDispatch } from 'react-redux';
+import { userActions } from 'redux/user/user-slice';
+import { useHistory } from 'react-router';
+import { HOME_PATH } from 'constants/route-constants';
 
 const CLIENT_ID = '245662031136-hvjuoeoh8e97nodofh60293macuncav4.apps.googleusercontent.com';
 
 const LoginHooks = () => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+
   const onSuccess = (responseGoogle: GoogleLoginResponse | GoogleLoginResponseOffline) => {
     if ('profileObj' in responseGoogle) {
-      console.log('login success, user: ', responseGoogle.profileObj);
-      // const { name } = responseGoogle.profileObj;
+      const profile = responseGoogle.profileObj;
+      dispatch(userActions.updateUser({ profile }));
+      history.push(HOME_PATH);
     }
   };
 
   const onFailure = (res: any) => {
     console.log('Login failed', res);
+    dispatch(userActions.updateUser({ payload: null }));
   };
 
   const { signIn } = useGoogleLogin({
