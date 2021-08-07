@@ -7,9 +7,11 @@ import { Avatar, InputAdornment, TextField } from '@material-ui/core';
 import { icons } from 'constants/constants';
 import { useSelector } from 'react-redux';
 import * as userSelectors from 'redux/user/user-selectors';
+import LogoutHooks from './LogoutHooks';
 
 const Header = () => {
   const user = useSelector(userSelectors.user);
+
   return (
     <>
       <Wave />
@@ -38,8 +40,8 @@ const Header = () => {
           <h3 className="header-name">
             {user.profile.name}
           </h3>
+          <LogoutHooks />
         </div>
-
       </div>
     </>
   );

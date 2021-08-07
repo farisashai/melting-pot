@@ -1,5 +1,6 @@
 View the website [here](https://melting-pot-quellie-hacks.netlify.app/)!
-
+Teck Stack
+HTML, CSS, JavaScript, React, SCSS, TypeScript, ESLint-Airbnb, MaterialUI, Google OAuth, Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
