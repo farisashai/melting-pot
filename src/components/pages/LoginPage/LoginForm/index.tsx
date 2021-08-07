@@ -1,33 +1,21 @@
 import Logo from 'components/common/Logo';
 import React from 'react';
-import { GoogleLogin, GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
+import { Button, TextField } from '@material-ui/core';
 import './style.scss';
-
-const CLIENT_ID = '245662031136-hvjuoeoh8e97nodofh60293macuncav4.apps.googleusercontent.com';
+import LoginHooks from '../LoginHooks';
 
 const index = () => (
   <div className="login-wrapper">
     <div className="login-form">
-
       <Logo setBlack />
-
       <h1 className="login-title">Melting Pot</h1>
-
-      <input className="login-input" type="text" placeholder="Email" />
-      <input className="login-input" type="password" placeholder="Password" />
-      <button className="login-button" type="button">Sign In</button>
-      <GoogleLogin
-        clientId={CLIENT_ID}
-        onSuccess={(responseGoogle: GoogleLoginResponse | GoogleLoginResponseOffline) => {
-          if ('profileObj' in responseGoogle) {
-            // const { name } = responseGoogle.profileObj;
-          }
-        }}
-      >
-        Sign In with Google
-      </GoogleLogin>
+      <TextField label="Email" />
+      <TextField type="password" label="Password" />
+      <Button variant="contained" color="secondary">
+        Sign In
+      </Button>
+      <LoginHooks />
     </div>
-
   </div>
 );
 
