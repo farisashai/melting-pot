@@ -1,0 +1,27 @@
+@import 'style/vars';
+@import 'style/typography';
+
+hr {
+  width: 100%;
+  border: 1px solid $orange;
+  border-radius: 1px;
+}
+
+.section-header {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.section-title {
+  font-family: $hind;
+  font-size: 24px;
+  font-weight: 600;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+.red {
+  color: $red;
+}

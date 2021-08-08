@@ -16,15 +16,15 @@ const Header = () => {
     <>
       <Wave />
       <div className="header">
-        <div className="header-logo">
-          <Logo setBlack={false} />
-          <h1 className="header-title">Melting Pot</h1>
-        </div>
-        <nav className="nav-items">
-          <a href={HOME_PATH}>Explore</a>
-          <a href={HOME_PATH}>Blog</a>
-          <a href={HOME_PATH}>Settings</a>
-        </nav>
+        <Logo setBlack={false} />
+        <h1 className="header-title">Melting Pot</h1>
+        <a href={HOME_PATH}>Explore</a>
+        <a href={HOME_PATH}>Blog</a>
+        <a href={HOME_PATH}>Settings</a>
+        {/* <div className="header-logo">
+        </div> */}
+        {/* <nav className="nav-items">
+        </nav> */}
         <TextField
           placeholder="Search"
           InputProps={{
@@ -35,13 +35,14 @@ const Header = () => {
             ),
           }}
         />
-        <div className="header-user">
-          <Avatar src={user.profile.imageUrl} />
-          <h3 className="header-name">
-            {user.profile.name}
-          </h3>
-          <LogoutHooks />
-        </div>
+        <Avatar src={user.profile.imageUrl} />
+        <h3 className="header-name">
+          {user.profile.name}
+        </h3>
+        <LogoutHooks />
+        {/* <div className="header-user">
+
+        </div> */}
       </div>
     </>
   );
