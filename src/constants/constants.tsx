@@ -19,3 +19,39 @@ export const icons = {
   INDIA: India,
   SEARCH: Search,
 };
+
+export const names = {
+  SPAIN: 'Spanish',
+  CHINA: 'Chinese',
+  FRANCE: 'French',
+  JAPAN: 'Japanese',
+  KOREA: 'Korean',
+  INDIA: 'Indian',
+};
+
+export const cultures = [
+  {
+    icon: icons.SPAIN,
+    title: names.SPAIN,
+  },
+  {
+    icon: icons.CHINA,
+    title: names.CHINA,
+  },
+  {
+    icon: icons.FRANCE,
+    title: names.FRANCE,
+  },
+  {
+    icon: icons.JAPAN,
+    title: names.JAPAN,
+  },
+  {
+    icon: icons.KOREA,
+    title: names.KOREA,
+  },
+  {
+    icon: icons.INDIA,
+    title: names.INDIA,
+  },
+];

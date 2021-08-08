@@ -3,16 +3,18 @@ import Header from 'components/common/Header';
 import './style.scss';
 import Section from 'components/common/Section';
 import CulturePanel from './CulturePanel';
+import EventsPanel from './EventsPanel';
+import FoodPanel from './FoodPanel';
 
 const HomePage = () => (
-  <div>
+  <>
     <Header />
     <div className="home-body">
       <Section Panel={CulturePanel} />
-      <Section />
-      <Section />
+      <Section Panel={EventsPanel} />
+      <Section Panel={FoodPanel} />
     </div>
-  </div>
+  </>
 );
 
 export default HomePage;
