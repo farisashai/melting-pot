@@ -1,13 +1,18 @@
 import React from 'react';
 import './style.scss';
 
-const FoodCard = () => (
+interface FoodProps {
+  src: string
+  name: string,
+  price: string,
+}
+const FoodCard = ({ src, name, price }: FoodProps) => (
   <div className="food-card">
     <div className="box">
-      <img className="pic" src="https://source.unsplash.com/random" alt="" />
+      <img className="pic" src={src} alt="" />
       <div className="text">
-        <h4 className="title">Eggplant Sushi with fishy eggs</h4>
-        <h4 className="price">$15.23</h4>
+        <h4 className="title">{name}</h4>
+        <h4 className="price">{price}</h4>
       </div>
     </div>
   </div>
