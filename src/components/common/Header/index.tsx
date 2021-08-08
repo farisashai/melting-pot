@@ -35,10 +35,12 @@ const Header = () => {
             ),
           }}
         />
-        <Avatar src={user.profile.imageUrl} />
         <h3 className="header-name">
+          Welcome back,&nbsp;
           {user.profile.name}
+          !
         </h3>
+        <Avatar src={user.profile.imageUrl} />
         <LogoutHooks />
         {/* <div className="header-user">
 
