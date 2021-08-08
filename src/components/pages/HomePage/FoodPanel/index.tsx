@@ -5,6 +5,14 @@ import './style.scss';
 const FoodPanel = () => (
   <div className="food-container">
     <FoodCard />
+    <FoodCard />
+    <FoodCard />
+    <FoodCard />
+    <FoodCard />
+    <FoodCard />
+    <FoodCard />
+    <FoodCard />
+    <FoodCard />
   </div>
 );
 

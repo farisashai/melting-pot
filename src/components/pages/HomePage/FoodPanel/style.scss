@@ -1,4 +1,6 @@
 .food-container {
   width: 100%;
-  background-color: red;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
