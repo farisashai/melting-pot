@@ -5,7 +5,7 @@ import LoginPage from 'components/pages/LoginPage';
 import HomePage from 'components/pages/HomePage';
 import { Redirect } from 'react-router';
 
-const Routes = () => (
+const AppRoutes = () => (
   <Router>
     <Switch>
       <Route exact path={HOME_PATH} component={HomePage} />
@@ -17,4 +17,4 @@ const Routes = () => (
   </Router>
 );
 
-export default Routes;
+export default AppRoutes;

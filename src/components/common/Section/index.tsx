@@ -5,16 +5,23 @@ import './style.scss';
 
 interface SectionProps {
   Panel?: React.ElementType,
+  red: string,
+  title: string,
+  link: string,
+  redFirst: boolean,
 }
 
-const Section = ({ Panel }: SectionProps) => (
+const Section = ({
+  Panel, red, title, link, redFirst,
+}: SectionProps) => (
   <div className="section-container">
     <div className="section-header">
       <h3 className="section-title">
-        Cultures near&nbsp;
-        <span className="red">Los Angeles, California</span>
+        { !redFirst && title}
+        <span className="red">{red}</span>
+        {redFirst && title}
       </h3>
-      <a className="section-link" href={HOME_PATH}>Change Location</a>
+      <a className="section-link" href={HOME_PATH}>{link}</a>
       <Button className="section-button" />
     </div>
     <hr />

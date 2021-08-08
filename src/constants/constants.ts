@@ -6,10 +6,6 @@ import { ReactComponent as Korea } from 'assets/korea.svg';
 import { ReactComponent as India } from 'assets/india.svg';
 import { ReactComponent as Search } from 'assets/search.svg';
 
-export const one = 'one';
-
-export const two = 'two';
-
 export const icons = {
   SPAIN: Spain,
   CHINA: China,

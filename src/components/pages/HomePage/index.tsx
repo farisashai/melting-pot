@@ -11,9 +11,9 @@ const HomePage = () => (
   <>
     <Header />
     <div className="home-body">
-      <Section Panel={CulturePanel} />
-      <Section Panel={EventsPanel} />
-      <Section Panel={FoodPanel} />
+      <Section Panel={CulturePanel} red="Los Angeles, California" title="Cultural Events in " link="Change location" redFirst={false} />
+      <Section Panel={EventsPanel} red="Japanese, Spanish" title=" Cultural Events Happening Soon in Los Angeles" link="Select Date Range" redFirst />
+      <Section Panel={FoodPanel} red="Japanese, Spanish" title=" Food near Los Angeles" link="" redFirst />
     </div>
     <Footer />
   </>
