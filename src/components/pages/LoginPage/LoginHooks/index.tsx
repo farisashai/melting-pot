@@ -21,9 +21,7 @@ const LoginHooks = () => {
     }
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const onFailure = (res: any) => {
-    // console.log('Login failed', res);
+  const onFailure = () => {
     dispatch(userActions.updateUser({ payload: null }));
   };
 

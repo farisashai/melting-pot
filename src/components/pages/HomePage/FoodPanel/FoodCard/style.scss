@@ -1,0 +1,48 @@
+@import 'style/typography';
+@import 'style/vars';
+
+.food-card {
+  width: 12rem;
+  height: 14rem;
+  position: relative;
+  font-family: $hind;
+}
+
+.box {
+  width: 12rem;
+  height: 10rem;
+  position: absolute;
+  bottom: 0;
+  background-color: #F8F1EB;
+  text-align: center;
+  border-radius: 2rem;
+  font-family: sans-serif;
+  font-size: 14px;;
+}
+
+.pic {
+  position: absolute;
+  top: -4rem;
+  left: 2rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+.text {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 2rem;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.price {
+  font-size: 17px;
+  color: $red;
+}

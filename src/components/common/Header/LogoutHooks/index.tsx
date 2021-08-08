@@ -17,7 +17,6 @@ const LogoutHooks = () => {
     history.push(LOGIN_PATH);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onFailure = () => {
     dispatch(userActions.updateUser({ }));
   };

@@ -2,11 +2,12 @@ import React from 'react';
 import './style.scss';
 
 interface WaveProps {
-  flip?: boolean,
+  flipX?: boolean,
+  flipY?: boolean
 }
 
-const Wave: React.FC<WaveProps> = ({ flip }: WaveProps): JSX.Element => (
-  <svg className={`wave ${flip ? 'flip' : ''}`} viewBox="0 0 500 150">
+const Wave: React.FC<WaveProps> = ({ flipX, flipY }: WaveProps): JSX.Element => (
+  <svg className={`wave ${flipX ? 'flipX' : ''} ${flipY ? 'flipY' : ''}`} viewBox="0 0 500 150">
     <defs>
       <linearGradient id="gradient" gradientTransform="rotate(105)">
         <stop offset="5%" stopColor="#F96A8E" />
@@ -19,6 +20,7 @@ const Wave: React.FC<WaveProps> = ({ flip }: WaveProps): JSX.Element => (
 );
 
 Wave.defaultProps = {
-  flip: false,
+  flipX: false,
+  flipY: false,
 };
 export default Wave;
